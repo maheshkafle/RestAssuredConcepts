@@ -1,3 +1,5 @@
+package com.restfulbooker.qa.testcases;
+
 import io.restassured.RestAssured;
 import org.testng.annotations.Test;
 
@@ -17,9 +19,10 @@ public class TestPatchApiResponseAfterQuery {
                 "}" ;
         given()
                 .body(payload)
-                .when()
+        .when()
                 .put()
-                .then().log().all()
+        .then()
+                .log().all()
                 .assertThat().statusCode(200)
                 .body("updatedAt",is(notNullValue()));
     }
