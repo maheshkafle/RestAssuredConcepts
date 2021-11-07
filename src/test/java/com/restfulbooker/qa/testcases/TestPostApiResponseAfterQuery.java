@@ -34,7 +34,7 @@ public class TestPostApiResponseAfterQuery {
     }
 
     @Test
-    void createBookings(){
+    void TestCreateBookingsURI(){
         given()
                 .contentType("application/json; charset=utf-8")
                 .body(bookingInfoMap)
