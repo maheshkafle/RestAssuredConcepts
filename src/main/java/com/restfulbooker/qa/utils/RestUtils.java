@@ -2,19 +2,17 @@ package com.restfulbooker.qa.utils;
 
 import org.apache.commons.lang3.RandomStringUtils;
 
-
-import java.time.LocalDate;
 import java.util.concurrent.ThreadLocalRandom;
 
 public class RestUtils {
 
     public static String getFirstName(){
-        String generatedString = RandomStringUtils.randomAlphabetic(1);
+        String generatedString = RandomStringUtils.randomAlphabetic(4);
         return ("Preeyan"+generatedString);
     }
 
     public static String getLastName(){
-        String generatedString = RandomStringUtils.randomAlphabetic(1);
+        String generatedString = RandomStringUtils.randomAlphabetic(4);
         return ("Soudyal"+generatedString);
     }
 
@@ -29,7 +27,7 @@ public class RestUtils {
     }
 
     public static String getAdditionalNeeds(){
-        String generatedString = RandomStringUtils.randomAlphabetic(1);
+        String generatedString = RandomStringUtils.randomAlphabetic(4);
         return ("Breakfast"+generatedString);
     }
 
