@@ -1,23 +1,19 @@
 package com.restfulbooker.qa.testcases;
 
+import com.restfulbooker.qa.TestBase.TestBase;
 import com.restfulbooker.qa.utils.RestUtils;
 import io.restassured.RestAssured;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-import java.util.LinkedHashMap;
-import java.util.Map;
-
 import static io.restassured.RestAssured.given;
 import static org.hamcrest.Matchers.*;
 
-public class TestPostApiResponseAfterQuery {
-
-    public static Map<String, Object> bookingInfoMap = new LinkedHashMap<>();
-    public static Map<String, Object> bookingDatesInfoMap = new LinkedHashMap<>();
+public class TestPostApiResponseAfterQuery extends TestBase {
 
     @BeforeTest
     public void postData(){
+
         bookingInfoMap.put("firstname", RestUtils.getFirstName());
         bookingInfoMap.put("lastname", RestUtils.getLastName());
         bookingInfoMap.put("totalprice", RestUtils.getTotalPrice());
@@ -31,6 +27,7 @@ public class TestPostApiResponseAfterQuery {
 
         RestAssured.baseURI ="https://restful-booker.herokuapp.com";
         RestAssured.basePath="/booking";
+
     }
 
     @Test
